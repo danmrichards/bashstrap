@@ -4,6 +4,10 @@
 # "s ." will open the current directory in Sublime
 alias s='open -a "Sublime Text"'
 
+# Open specified files in Atom
+# "a ." will open the current directory in Sublime
+alias a='atom .'
+
 # Color LS
 colorflag="-G"
 alias ls="command ls ${colorflag}"
@@ -23,14 +27,6 @@ alias sudo='sudo '
 # Colored up cat!
 # You must install Pygments first - "sudo easy_install Pygments"
 alias c='pygmentize -O style=monokai -f console256 -g'
-
-# Git
-# You must install Git first
-alias gs='git status'
-alias ga='git add .'
-alias gc='git commit -m' # requires you to type a commit message
-alias gp='git push'
-alias grm='git rm $(git ls-files --deleted)'
 
 ### Prompt Colors
 # Modified version of @gf3’s Sexy Bash Prompt
