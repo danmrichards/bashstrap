@@ -39,17 +39,17 @@ fi
 
 if tput setaf 1 &> /dev/null; then
 	tput sgr0
-	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
-		MAGENTA=$(tput setaf 9)
-		ORANGE=$(tput setaf 172)
-		GREEN=$(tput setaf 190)
-		PURPLE=$(tput setaf 141)
-	else
-		MAGENTA=$(tput setaf 5)
-		ORANGE=$(tput setaf 4)
-		GREEN=$(tput setaf 2)
-		PURPLE=$(tput setaf 1)
-	fi
+
+	BLACK=$(tput setaf 0)
+	RED=$(tput setaf 1)
+	GREEN=$(tput setaf 2)
+	LIME_YELLOW=$(tput setaf 190)
+	YELLOW=$(tput setaf 3)
+	POWDER_BLUE=$(tput setaf 153)
+	BLUE=$(tput setaf 4)
+	MAGENTA=$(tput setaf 5)
+	CYAN=$(tput setaf 6)
+	WHITE=$(tput setaf 7)
 	BOLD=$(tput bold)
 	RESET=$(tput sgr0)
 else
@@ -61,10 +61,16 @@ else
 	RESET="\033[m"
 fi
 
-export MAGENTA
-export ORANGE
+export BLACK
+export RED
 export GREEN
-export PURPLE
+export LIME_YELLOW
+export YELLOW
+export POWDER_BLUE
+export BLUE
+export MAGENTA
+export CYAN
+export WHITE
 export BOLD
 export RESET
 
@@ -80,7 +86,7 @@ function parse_git_branch() {
 # (http://en.wikipedia.org/wiki/Unicode_symbols)
 symbol="⚡ "
 
-export PS1="\[${MAGENTA}\]\u \[$RESET\]in \[$GREEN\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$RESET\]\n$symbol\[$RESET\]"
+export PS1="\[$RED\]\u \[$RESET\]in \[$BLUE\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$RESET\]\n$symbol\[$RESET\] "
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 
