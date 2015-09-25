@@ -8,7 +8,7 @@ Based on Mathias Bynens epic dotfiles - https://github.com/mathiasbynens/dotfile
 
 **Faster directory navigation**
 
-- Open your current directory in Sublime Text (with just 2 characters)
+- Open your current directory in Sublime Text or Atom (with just 2 characters)
 - Jump directories rapidly, without having to set aliases—using Z (my favorite feature!)
 - Tab bar displays your current directory
 - Lots of quick shortcut aliases that I use for git and moving around directories
@@ -30,12 +30,11 @@ Based on Mathias Bynens epic dotfiles - https://github.com/mathiasbynens/dotfile
 
 		mv ~/.bash_profile ~/.bash_profile_backup
 		mv ~/.bashrc ~/.bashrc_backup
-		mv ~/.gitconfig ~/.gitconfig_backup
 
 2. Install Bashstrap into your home dir:
 
-		cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
-		
+		cd; curl -#L https://github.com/danmrichards/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
+
 3. Run `source ~/.bash_profile` or restart iTerm or terminal.
 
 ### Installation: iTerm (5 mins)
